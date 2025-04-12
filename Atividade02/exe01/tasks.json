@@ -1,0 +1,25 @@
+[ {
+  "task" : "Aumentar o volume do som",
+  "date" : "2023-10-01",
+  "status" : "Concluída"
+}, {
+  "task" : "Aumentar o brilho da tela",
+  "date" : "2023-10-04",
+  "status" : ""
+}, {
+  "task" : "Aumentar o brilho do teclado",
+  "date" : "2023-10-03",
+  "status" : ""
+}, {
+  "task" : "Aumentar o volume do microfone",
+  "date" : "2023-10-02",
+  "status" : ""
+}, {
+  "task" : "Aumentar o volume do fone de ouvido",
+  "date" : "2023-10-05",
+  "status" : ""
+}, {
+  "task" : "Alguma coisa e CIA",
+  "date" : "2025-04-12",
+  "status" : "Concluída"
+} ]
