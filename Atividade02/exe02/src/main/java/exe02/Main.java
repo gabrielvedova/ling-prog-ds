@@ -63,7 +63,7 @@ public class Main {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            File file = Paths.get("/home/vedova/Documentos/ling-prog-ds/Atividade02/exe02/Stock.json").toFile();
+            File file = Paths.get("Atividade02/exe02/Stock.json").toFile();
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, stock);
             System.out.println("Item adicionado ao estoque!");
         } catch (IOException e) {
@@ -82,7 +82,7 @@ public class Main {
                     System.out.println("Tipo: " + type);
                     for (ItemStock item : items) {
                         System.out.println("Nome: " + item.name + " | Quantidade: " + item.quantity + " | Preço: " + item.price);
-                        totalPrice[0] += item.price;
+                        totalPrice[0] += item.price*item.quantity;
                     }
                 });
         System.out.println("Valor total do estoque: R$" + totalPrice[0]);
@@ -91,7 +91,7 @@ public class Main {
     private static List<ItemStock> readJSON() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        File file = new File("/home/vedova/Documentos/ling-prog-ds/Atividade02/exe02/Stock.json");
+        File file = new File("Atividade02/exe02/Stock.json");
         if (!file.exists()) {
             throw new IOException("Arquivo não encontrado na pasta raiz" );
         }

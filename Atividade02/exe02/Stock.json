@@ -58,4 +58,9 @@
   "quantity" : 24,
   "price" : 347.99,
   "typeProduct" : "Doméstico"
+}, {
+  "name" : "Jacaré Pelúcia",
+  "quantity" : 137,
+  "price" : 45.0,
+  "typeProduct" : "Brinquedos"
 } ]

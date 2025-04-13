@@ -18,7 +18,7 @@ public class Main {
         ObjectMapper mapper = new ObjectMapper();
 
         // JSON → Objeto (usando arquivo de resources)
-        File file = new File("/home/vedova/Documentos/ling-prog-ds/Atividade02/exe01/tasks.json");
+        File file = new File("Atividade02/exe01/tasks.json");
         if (!file.exists()) {
             throw new IOException("Arquivo não encontrado na pasta raiz" );
         }
@@ -73,7 +73,7 @@ public class Main {
         // Salvar a lista de tarefas de volta no arquivo JSON
         ObjectMapper mapper = new ObjectMapper();
         try {
-            File file = Paths.get("/home/vedova/Documentos/ling-prog-ds/Atividade02/exe01/tasks.json").toFile();
+            File file = Paths.get("Atividade02/exe01/tasks.json").toFile();
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, task);
             System.out.println("Tarefa adicionada com sucesso!");
         } catch (IOException e) {
@@ -105,7 +105,7 @@ public class Main {
                 // Salvar a lista de tarefas de volta no arquivo JSON
                 ObjectMapper mapper = new ObjectMapper();
                 try {
-                    File file = Paths.get("/home/vedova/Documentos/ling-prog-ds/Atividade02/exe01/tasks.json").toFile();
+                    File file = Paths.get("Atividade02/exe01/tasks.json").toFile();
                     mapper.writerWithDefaultPrettyPrinter().writeValue(file, tasks);
                 } catch (IOException e) {
                     System.out.println("Erro ao marcar a tarefa como concluída:" + e.getMessage());
