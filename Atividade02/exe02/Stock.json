@@ -1,0 +1,61 @@
+[ {
+  "name" : "Notebook",
+  "quantity" : 10,
+  "price" : 1500.0,
+  "typeProduct" : "Eletrônicos"
+}, {
+  "name" : "Caderno",
+  "quantity" : 50,
+  "price" : 5.0,
+  "typeProduct" : "Papelaria"
+}, {
+  "name" : "Smartphone",
+  "quantity" : 20,
+  "price" : 800.0,
+  "typeProduct" : "Eletrônicos"
+}, {
+  "name" : "Cadeira",
+  "quantity" : 15,
+  "price" : 45.0,
+  "typeProduct" : "Móveis"
+}, {
+  "name" : "Mesa",
+  "quantity" : 8,
+  "price" : 120.0,
+  "typeProduct" : "Móveis"
+}, {
+  "name" : "Fones de Ouvido",
+  "quantity" : 25,
+  "price" : 50.0,
+  "typeProduct" : "Eletrônicos"
+}, {
+  "name" : "Caneta",
+  "quantity" : 100,
+  "price" : 1.5,
+  "typeProduct" : "Papelaria"
+}, {
+  "name" : "Mochila",
+  "quantity" : 30,
+  "price" : 40.0,
+  "typeProduct" : "Acessórios"
+}, {
+  "name" : "Monitor",
+  "quantity" : 12,
+  "price" : 200.0,
+  "typeProduct" : "Eletrônicos"
+}, {
+  "name" : "Mouse",
+  "quantity" : 40,
+  "price" : 25.0,
+  "typeProduct" : "Eletrônicos"
+}, {
+  "name" : "Fogão",
+  "quantity" : 5,
+  "price" : 800.0,
+  "typeProduct" : "Eletrodomésticos"
+}, {
+  "name" : "Sofá",
+  "quantity" : 24,
+  "price" : 347.99,
+  "typeProduct" : "Doméstico"
+} ]
