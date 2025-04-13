@@ -1,0 +1,157 @@
+{
+  "A" : [ {
+    "name" : "A1",
+    "isAvailable" : true
+  }, {
+    "name" : "A2",
+    "isAvailable" : true
+  }, {
+    "name" : "A3",
+    "isAvailable" : true
+  }, {
+    "name" : "A4",
+    "isAvailable" : true
+  }, {
+    "name" : "A5",
+    "isAvailable" : true
+  }, {
+    "name" : "A6",
+    "isAvailable" : true
+  }, {
+    "name" : "A7",
+    "isAvailable" : true
+  }, {
+    "name" : "A8",
+    "isAvailable" : true
+  }, {
+    "name" : "A9",
+    "isAvailable" : true
+  }, {
+    "name" : "A10",
+    "isAvailable" : true
+  } ],
+  "B" : [ {
+    "name" : "B1",
+    "isAvailable" : true
+  }, {
+    "name" : "B2",
+    "isAvailable" : true
+  }, {
+    "name" : "B3",
+    "isAvailable" : true
+  }, {
+    "name" : "B4",
+    "isAvailable" : true
+  }, {
+    "name" : "B5",
+    "isAvailable" : true
+  }, {
+    "name" : "B6",
+    "isAvailable" : true
+  }, {
+    "name" : "B7",
+    "isAvailable" : true
+  }, {
+    "name" : "B8",
+    "isAvailable" : true
+  }, {
+    "name" : "B9",
+    "isAvailable" : true
+  }, {
+    "name" : "B10",
+    "isAvailable" : true
+  } ],
+  "C" : [ {
+    "name" : "C1",
+    "isAvailable" : true
+  }, {
+    "name" : "C2",
+    "isAvailable" : true
+  }, {
+    "name" : "C3",
+    "isAvailable" : true
+  }, {
+    "name" : "C4",
+    "isAvailable" : true
+  }, {
+    "name" : "C5",
+    "isAvailable" : true
+  }, {
+    "name" : "C6",
+    "isAvailable" : true
+  }, {
+    "name" : "C7",
+    "isAvailable" : true
+  }, {
+    "name" : "C8",
+    "isAvailable" : true
+  }, {
+    "name" : "C9",
+    "isAvailable" : true
+  }, {
+    "name" : "C10",
+    "isAvailable" : true
+  } ],
+  "D" : [ {
+    "name" : "D1",
+    "isAvailable" : true
+  }, {
+    "name" : "D2",
+    "isAvailable" : true
+  }, {
+    "name" : "D3",
+    "isAvailable" : true
+  }, {
+    "name" : "D4",
+    "isAvailable" : true
+  }, {
+    "name" : "D5",
+    "isAvailable" : true
+  }, {
+    "name" : "D6",
+    "isAvailable" : true
+  }, {
+    "name" : "D7",
+    "isAvailable" : true
+  }, {
+    "name" : "D8",
+    "isAvailable" : true
+  }, {
+    "name" : "D9",
+    "isAvailable" : true
+  }, {
+    "name" : "D10",
+    "isAvailable" : true
+  } ],
+  "E" : [ {
+    "name" : "E1",
+    "isAvailable" : true
+  }, {
+    "name" : "E2",
+    "isAvailable" : true
+  }, {
+    "name" : "E3",
+    "isAvailable" : true
+  }, {
+    "name" : "E4",
+    "isAvailable" : true
+  }, {
+    "name" : "E5",
+    "isAvailable" : true
+  }, {
+    "name" : "E6",
+    "isAvailable" : true
+  }, {
+    "name" : "E7",
+    "isAvailable" : true
+  }, {
+    "name" : "E8",
+    "isAvailable" : true
+  }, {
+    "name" : "E9",
+    "isAvailable" : true
+  }, {
+    "name" : "E10",
+    "isAvailable" : true
+  } ]
+}
