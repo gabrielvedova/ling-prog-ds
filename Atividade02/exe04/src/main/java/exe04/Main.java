@@ -2,6 +2,7 @@ package exe04;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,8 +25,8 @@ public class Main {
                 System.out.println("Bem vindo " + user.getUsername() + "!");
                 System.out.println("Saldo: " + user.balance);
                 System.out.println("Digite a ação que deseje realizar:");
-                System.out.println("1 - Depositar");
-                System.out.println("2 - Sacar");
+                System.out.println("1 - Depositar (+num)");
+                System.out.println("2 - Sacar (-num)");
                 System.out.println("3 - Listar Transações");
                 System.out.println("4 - Sair");
                 int action = scanner.nextInt();
@@ -35,14 +36,67 @@ public class Main {
                     System.out.println("Informe o valor a ser depositado:");
                     float deposit = scanner.nextFloat();
                     scanner.nextLine();
-                    setBalance(deposit, user);
+
+                    setBalance(deposit, user, true);
+                    System.out.println("Depósito realizado com sucesso!");
+                } else if (action == 2) {
+                    System.out.println("Informe o valor a ser sacado:");
+                    float deposit = scanner.nextFloat();
+                    scanner.nextLine();
+
+                    if (user.balance < deposit) {
+                        System.out.println("Saldo insuficiente!");
+                    } else {
+                        setBalance(deposit, user, false);
+                        System.out.println("Saque realizado com sucesso!");
+                    }
+                } else if (action == 3) {
+                    getTransictions(username);
+                } else if (action == 4) {
+                    System.out.println("Saindo...");
+                    break;
                 }
+            }
+        }
+        scanner.close();
+    }
+
+    private static void getTransictions(String username) {
+        List<User> users = getJSON();
+
+        for (User u : users) {
+            if (u.getUsername().equals(username)) {
+                System.out.println("Transações:");
+                for (Transactions transaction : u.transactions) {
+                    System.out.println("Data: " + transaction.date + ", Valor: " + transaction.amount);
+                }
+                break;
+
             }
         }
     }
 
-    private static void setBalance(float deposit, User user) {
+    private static void setBalance(float deposit, User user, boolean isDeposit) {
+        if (!isDeposit) {
+            deposit = -deposit;
+        }
         user.balance += deposit;
+        Transactions transactions = new Transactions();
+        transactions.date = java.time.LocalDate.now().toString();
+        transactions.amount = deposit;
+        user.transactions.add(transactions);
+
+        // Inserindo no arquivo JSON
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            File file = Paths.get("Atividade02/exe04/bank.json").toFile();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, user);
+            System.out.println("Arquivo atualizado com sucesso!");
+        } catch (IOException e) {
+            System.out.println("Erro ao escrever no arquivo JSON: " + e.getMessage());
+            e.printStackTrace();
+        }
 
     }
 
@@ -87,22 +141,42 @@ public class Main {
 }
 
 class User {
+    @JsonProperty("username")
     private String username;
+
+    @JsonProperty("password")
     private String password;
+
+    @JsonProperty("account")
     public Integer account;
+
+    @JsonProperty("balance")
     public float balance;
+
+    @JsonProperty("transactions")
     public List<Transactions> transactions;
 
     public String getUsername() {
         return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 
 class Transactions {
+    @JsonProperty("date")
     public String date;
+
+    @JsonProperty("amount")
     public float amount;
 }
