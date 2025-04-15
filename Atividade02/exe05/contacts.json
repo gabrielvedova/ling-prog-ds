@@ -1,0 +1,17 @@
+[ {
+  "name" : "John Doe",
+  "phoneNumber" : "(81)99113-7232",
+  "email" : "johndoe@hotmail.com"
+}, {
+  "name" : "Jane Smith",
+  "phoneNumber" : "(81)99113-8232",
+  "email" : "janeSmi@gmail.com"
+}, {
+  "name" : "Gabriel Vedova",
+  "phoneNumber" : "(81)99113-7232",
+  "email" : "bielvedova@gmail.com"
+}, {
+  "name" : "Helo Santos",
+  "phoneNumber" : "(81)98888-8888",
+  "email" : "bielvedova@gmail.com"
+} ]
