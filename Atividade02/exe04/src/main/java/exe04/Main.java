@@ -70,6 +70,7 @@ public class Main {
                 for (Transactions transaction : u.transactions) {
                     System.out.println("Data: " + transaction.date + ", Valor: " + transaction.amount);
                 }
+                System.out.println();
                 break;
 
             }
@@ -86,13 +87,21 @@ public class Main {
         transactions.amount = deposit;
         user.transactions.add(transactions);
 
+        List<User> users = getJSON();
+        for (User u : users) {
+            if (u.getUsername().equals(user.getUsername())) {
+                u.balance = user.balance;
+                u.transactions = user.transactions;
+                break;
+            }
+        }
+
         // Inserindo no arquivo JSON
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             File file = Paths.get("Atividade02/exe04/bank.json").toFile();
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, user);
-            System.out.println("Arquivo atualizado com sucesso!");
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, users);
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo JSON: " + e.getMessage());
             e.printStackTrace();
@@ -141,19 +150,14 @@ public class Main {
 }
 
 class User {
-    @JsonProperty("username")
     private String username;
 
-    @JsonProperty("password")
     private String password;
 
-    @JsonProperty("account")
     public Integer account;
 
-    @JsonProperty("balance")
     public float balance;
 
-    @JsonProperty("transactions")
     public List<Transactions> transactions;
 
     public String getUsername() {
@@ -174,9 +178,7 @@ class User {
 }
 
 class Transactions {
-    @JsonProperty("date")
     public String date;
 
-    @JsonProperty("amount")
     public float amount;
 }

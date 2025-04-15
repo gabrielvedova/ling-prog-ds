@@ -1,4 +1,4 @@
-{
+[ {
   "username" : "john_doe",
   "password" : "password123",
   "account" : 123456,
@@ -13,4 +13,28 @@
     "date" : "2025-04-14",
     "amount" : 200.0
   } ]
-}
+}, {
+  "username" : "alice_more",
+  "password" : "password123",
+  "account" : 654321,
+  "balance" : 1300.0,
+  "transactions" : [ {
+    "date" : "2023-01-01",
+    "amount" : -100.0
+  }, {
+    "date" : "2023-01-02",
+    "amount" : 200.0
+  }, {
+    "date" : "2025-04-14",
+    "amount" : 100.0
+  }, {
+    "date" : "2025-04-15",
+    "amount" : 200.0
+  }, {
+    "date" : "2025-04-15",
+    "amount" : -200.0
+  }, {
+    "date" : "2025-04-15",
+    "amount" : 200.0
+  } ]
+} ]
